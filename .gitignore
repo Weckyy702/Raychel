@@ -1,0 +1,24 @@
+#build files
+build/
+**/CMakeFiles
+CMake**
+cmake**
+!cmake
+!CMakeLists.txt
+Makefile
+
+#documentation files
+/docs/
+
+#binary files
+*.a
+*.o
+
+#editor dir
+**/.vscode
+**/.vs
+**/.cache/
+compile_commands.json
+
+#log files
+*.log
