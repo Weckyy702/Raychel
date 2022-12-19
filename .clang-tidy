@@ -18,7 +18,7 @@ Checks: " *,
           -abseil-string-find-str-contains,
           -bugprone-exception-escape,
           -fuchsia-trailing-return,
-          -readability-static-accessed-through-instance
+          -readability-static-accessed-through-instance,
 "
 
 CheckOptions:
@@ -32,3 +32,5 @@ CheckOptions:
     value:          'c|n|f'
   - key:            readability-identifier-length.IgnoredLoopCounterNames
     value:          'c|i|j|k|n'
+  - key:            readability-braces-around-statements.ShortStatementLines
+    value:          1
