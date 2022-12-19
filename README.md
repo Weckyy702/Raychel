@@ -2,16 +2,36 @@
 
 ## What is ray marching?
 
-In ray marching, every object is defined by a so called **signed distance funtion**, SDF for short. A SDF gives the distance between a point in space and a surface, with negative values meaning the point is inside the object.  
-To trace a ray in a certain direction, we can take the minimum of all SDFs in the scene and move by that amount in that direction. We can now repeat this process until the smallest distance is zero (or very close to it).  
+In ray marching, every object is defined by a so called **signed distance funtion**, SDF for short. A SDF gives the distance between a point in space and a surface, with negative values meaning the point is inside the object.
+To trace a ray in a certain direction, we can take the minimum of all SDFs in the scene and move by that amount in that direction. We can now repeat this process until the smallest distance is zero (or very close to it).
 Like all ray tracing algorithms, ray marching allows for very realistic lighting simulations.
 
 ## Features
 
-The engine is currently a WIP and new features are added with almost every commit.  
+The engine is currently a WIP and new features are added with almost every commit.
 Current features include:
-* Nothing yet :(
-
+- Basic Shapes
+    - Spheres
+    - Boxes
+    - Planes
+- SDF Modifiers
+    - Hollowing
+    - Rounded corners
+    - Onioning
+- SDF Transforms
+    - Translation
+    - Rotation
+- SDF Boolean operations
+    - Union
+    - Difference
+    - Intersection
+- PBR Materials
+    - Diffuse
+    - Reflective (no glossy yet)
+    - Refractive
+- Denoising
+    - Single scale implementation of the Ray Histogram Fusion algorithm
+    - Multiscale (the good one) coming soon™
 ## Language
 
 Raychel is written in standard C++20 using as little hacks as possible. The design style is rather functional than object oriented, although OO patterns are used.
@@ -20,8 +40,8 @@ Raychel is written in standard C++20 using as little hacks as possible. The desi
 
 ### Compiler Support
 Raychel is primarily developed on a GNU/Linux system, so changes that break Windows compatibility may not be fixed immediately. The following compilers work for sure:
-* Clang 13
-* GCC 11
+* Clang 14
+* GCC 12.2
 
 ### Dependencies / Library credit
 
